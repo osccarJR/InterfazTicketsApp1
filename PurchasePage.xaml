@@ -1,0 +1,12 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InterfazTicketsApp.PurchasePage"
+             Title="Compra de Tickets">
+    <StackLayout Padding="10">
+        <Label Text="Compra de Tickets" FontSize="24" FontAttributes="Bold"/>
+        <Label Text="Nombre del evento" FontSize="18"/>
+        <Label Text="Fecha del evento" FontSize="18"/>
+        <Entry Placeholder="Cantidad de tickets" Keyboard="Numeric"/>
+        <Button Text="Comprar" />
+    </StackLayout>
+</ContentPage>
