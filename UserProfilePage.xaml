@@ -3,9 +3,10 @@
              x:Class="InterfazTicketsApp.UserProfilePage"
              Title="Perfil de Usuario">
     <StackLayout Padding="10">
-        <Label Text="Perfil de Usuario" FontSize="24" FontAttributes="Bold"/>
-        <Entry Placeholder="Nombre"/>
-        <Entry Placeholder="Correo electrónico"/>
-        <Button Text="Guardar cambios" />
+        <Label Text="Perfil de Usuario" FontSize="24" FontAttributes="Bold" />
+        <Entry Placeholder="Nombre" Text="{Binding UserName}" />
+        <Entry Placeholder="Correo electrónico" Text="{Binding UserEmail}" />
+        <Entry Placeholder="Número de teléfono" Text="{Binding UserPhone}" />
+        <Button Text="Guardar cambios" Command="{Binding SaveProfileCommand}" />
     </StackLayout>
 </ContentPage>

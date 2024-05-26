@@ -1,25 +1,41 @@
-﻿namespace InterfazTicketsApp
+﻿using Microsoft.Maui.Controls;
+using System.Collections.ObjectModel;
+
+namespace InterfazTicketsApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            BindingContext = new MainPageViewModel(); 
         }
     }
 
+    public class MainPageViewModel
+    {
+        public string SearchQuery { get; set; }
+        public string SelectedCategory { get; set; }
+        public DateTime SelectedDate { get; set; }
+        public Command SearchCommand { get; set; }
+        public ObservableCollection<Event> Events { get; set; }
+
+        public MainPageViewModel()
+        {
+            // Inicializa las propiedades y el comando
+            SearchCommand = new Command(OnSearch);
+            Events = new ObservableCollection<Event>();
+        }
+
+        private void OnSearch()
+        {
+            // Lógica para la búsqueda de eventos
+        }
+    }
+
+    public class Event
+    {
+        public string EventName { get; set; }
+        public DateTime EventDate { get; set; }
+    }
 }

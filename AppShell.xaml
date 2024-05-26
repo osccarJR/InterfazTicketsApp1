@@ -5,11 +5,13 @@
        Title="InterfazTicketsApp"
        x:Class="InterfazTicketsApp.AppShell">
 
-    <ShellContent Title="Buscar Eventos" ContentTemplate="{DataTemplate local:MainPage}" />
-    <ShellContent Title="Detalles del Evento" ContentTemplate="{DataTemplate local:EventDetailPage}" />
-    <ShellContent Title="Compra de Tickets" ContentTemplate="{DataTemplate local:PurchasePage}" />
-    <ShellContent Title="Perfil de Usuario" ContentTemplate="{DataTemplate local:UserProfilePage}" />
-    <ShellContent Title="Comentarios" ContentTemplate="{DataTemplate local:CommentsPage}" />
-    <ShellContent Title="Gestión de Eventos" ContentTemplate="{DataTemplate local:OrganizerPage}" />
+    <TabBar>
+        <ShellContent Title="Buscar Eventos" ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Title="Detalles del Evento" ContentTemplate="{DataTemplate local:EventDetailPage}" />
+        <ShellContent Title="Compra de Tickets" ContentTemplate="{DataTemplate local:PurchasePage}" />
+        <ShellContent Title="Perfil de Usuario" ContentTemplate="{DataTemplate local:UserProfilePage}" />
+        <ShellContent Title="Comentarios" ContentTemplate="{DataTemplate local:CommentsPage}" />
+        <ShellContent Title="Gestión de Eventos" ContentTemplate="{DataTemplate local:OrganizerPage}" />
+    </TabBar>
 
 </Shell>

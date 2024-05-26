@@ -3,12 +3,19 @@
              x:Class="InterfazTicketsApp.OrganizerPage"
              Title="Gestión de Eventos">
     <StackLayout Padding="10">
-        <Label Text="Gestión de Eventos" FontSize="24" FontAttributes="Bold"/>
-        <Button Text="Crear Nuevo Evento" />
-        <ListView x:Name="OrganizerEventsListView">
+        <Label Text="Gestión de Eventos" FontSize="24" FontAttributes="Bold" />
+        <Button Text="Crear Nuevo Evento" Command="{Binding CreateEventCommand}" />
+        <ListView x:Name="OrganizerEventsListView" ItemsSource="{Binding OrganizerEvents}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding EventName}" Detail="{Binding EventDate}" />
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="5">
+                            <Label Text="{Binding EventName}" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding EventDate}" FontSize="16" />
+                            <Button Text="Editar" Command="{Binding EditEventCommand}" />
+                            <Button Text="Eliminar" Command="{Binding DeleteEventCommand}" />
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
