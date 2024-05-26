@@ -3,9 +3,11 @@
              x:Class="InterfazTicketsApp.EventDetailPage"
              Title="Detalles del Evento">
     <StackLayout Padding="10">
-        <Label Text="{Binding EventName}" FontSize="24" FontAttributes="Bold"/>
-        <Label Text="{Binding EventDate}" FontSize="18"/>
-        <Label Text="{Binding EventDescription}" FontSize="16"/>
+        <Label Text="{Binding EventName}" FontSize="24" FontAttributes="Bold" />
+        <Image Source="{Binding EventImage}" HeightRequest="200" />
+        <Label Text="{Binding EventDate}" FontSize="18" />
+        <Label Text="{Binding EventLocation}" FontSize="18" />
+        <Label Text="{Binding EventDescription}" FontSize="16" />
         <Button Text="Comprar Tickets" Command="{Binding BuyTicketsCommand}" />
     </StackLayout>
 </ContentPage>
