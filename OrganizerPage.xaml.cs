@@ -1,9 +1,12 @@
-namespace InterfazTicketsApp;
+using Microsoft.Maui.Controls;
 
-public partial class OrganizerPage : ContentPage
+namespace InterfazTicketsApp
 {
-	public OrganizerPage()
-	{
-		InitializeComponent();
-	}
+    public partial class OrganizerPage : ContentPage
+    {
+        public OrganizerPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

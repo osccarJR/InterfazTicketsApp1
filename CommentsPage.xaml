@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InterfazTicketsApp.CommentsPage"
-             Title="CommentsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Comentarios">
+    <StackLayout Padding="10">
+        <Label Text="Comentarios y Valoraciones" FontSize="24" FontAttributes="Bold"/>
+        <ListView x:Name="CommentsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding UserName}" Detail="{Binding Comment}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Entry Placeholder="Escribe un comentario..."/>
+        <Button Text="Enviar" />
+    </StackLayout>
 </ContentPage>

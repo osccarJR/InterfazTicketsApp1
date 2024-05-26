@@ -1,9 +1,12 @@
-namespace InterfazTicketsApp;
+using Microsoft.Maui.Controls;
 
-public partial class UserProfilePage : ContentPage
+namespace InterfazTicketsApp
 {
-	public UserProfilePage()
-	{
-		InitializeComponent();
-	}
+    public partial class UserProfilePage : ContentPage
+    {
+        public UserProfilePage()
+        {
+            InitializeComponent();
+        }
+    }
 }

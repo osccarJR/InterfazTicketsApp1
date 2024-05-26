@@ -1,9 +1,12 @@
-namespace InterfazTicketsApp;
+using Microsoft.Maui.Controls;
 
-public partial class CommentsPage : ContentPage
+namespace InterfazTicketsApp
 {
-	public CommentsPage()
-	{
-		InitializeComponent();
-	}
+    public partial class CommentsPage : ContentPage
+    {
+        public CommentsPage()
+        {
+            InitializeComponent();
+        }
+    }
 }
