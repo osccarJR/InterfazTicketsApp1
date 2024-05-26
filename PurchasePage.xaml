@@ -3,10 +3,15 @@
              x:Class="InterfazTicketsApp.PurchasePage"
              Title="Compra de Tickets">
     <StackLayout Padding="10">
-        <Label Text="Compra de Tickets" FontSize="24" FontAttributes="Bold"/>
-        <Label Text="Nombre del evento" FontSize="18"/>
-        <Label Text="Fecha del evento" FontSize="18"/>
-        <Entry Placeholder="Cantidad de tickets" Keyboard="Numeric"/>
-        <Button Text="Comprar" />
+        <Label Text="Compra de Tickets" FontSize="24" FontAttributes="Bold" />
+        <Label Text="{Binding EventName}" FontSize="18" />
+        <Label Text="{Binding EventDate}" FontSize="18" />
+        <Label Text="{Binding EventLocation}" FontSize="18" />
+        <Entry Placeholder="Cantidad de tickets" Keyboard="Numeric" />
+        <Entry Placeholder="Nombre en la tarjeta" />
+        <Entry Placeholder="Número de tarjeta" Keyboard="Numeric" />
+        <Entry Placeholder="Fecha de expiración (MM/AA)" Keyboard="Numeric" />
+        <Entry Placeholder="CVC" Keyboard="Numeric" />
+        <Button Text="Comprar" Command="{Binding ConfirmPurchaseCommand}" />
     </StackLayout>
 </ContentPage>
