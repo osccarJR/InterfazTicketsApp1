@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿
+using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 
 namespace InterfazTicketsApp

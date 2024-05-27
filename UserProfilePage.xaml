@@ -2,11 +2,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InterfazTicketsApp.UserProfilePage"
              Title="Perfil de Usuario">
-    <StackLayout Padding="10">
-        <Label Text="Perfil de Usuario" FontSize="24" FontAttributes="Bold" />
-        <Entry Placeholder="Nombre" Text="{Binding UserName}" />
-        <Entry Placeholder="Correo electrónico" Text="{Binding UserEmail}" />
-        <Entry Placeholder="Número de teléfono" Text="{Binding UserPhone}" />
-        <Button Text="Guardar cambios" Command="{Binding SaveProfileCommand}" />
-    </StackLayout>
+    <Grid>
+        <Image Source="interfaz.JPG" Aspect="AspectFill"
+        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <StackLayout Padding="10">
+            <Label Text="Perfil de Usuario" FontSize="24" FontAttributes="Bold" />
+            <Entry Placeholder="Nombre" Text="{Binding UserName}" />
+            <Entry Placeholder="Correo electrónico" Text="{Binding UserEmail}" />
+            <Entry Placeholder="Número de teléfono" Text="{Binding UserPhone}" />
+            <Button Text="Guardar cambios" Command="{Binding SaveProfileCommand}" />
+        </StackLayout>
+    </Grid>
 </ContentPage>
