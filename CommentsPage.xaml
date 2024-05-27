@@ -4,24 +4,26 @@
              x:Class="InterfazTicketsApp.CommentsPage"
              Title="Comentarios y Valoraciones">
     <Grid>
-        <Image Source="interfaz.JPG" Aspect="AspectFill"
-        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-        <StackLayout Padding="10">
-            <Label Text="Comentarios y Valoraciones" FontSize="24" FontAttributes="Bold" />
-            <ListView x:Name="CommentsListView" ItemsSource="{Binding Comments}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Vertical" Padding="5">
-                                <Label Text="{Binding UserName}" FontSize="18" FontAttributes="Bold" />
-                                <Label Text="{Binding CommentText}" FontSize="16" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Entry Placeholder="Escribe un comentario..." Text="{Binding NewComment}" />
-            <Button Text="Enviar" Command="{Binding SubmitCommentCommand}" />
-        </StackLayout>
+        <Image Source="interfaz.jpg" Aspect="Fill"
+               HorizontalOptions="Fill" VerticalOptions="StartAndExpand"/>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="Comentarios y Valoraciones" FontSize="24" FontAttributes="Bold" />
+                <ListView x:Name="CommentsListView" ItemsSource="{Binding Comments}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" Padding="5">
+                                    <Label Text="{Binding UserName}" FontSize="18" FontAttributes="Bold" />
+                                    <Label Text="{Binding CommentText}" FontSize="16" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Entry Placeholder="Escribe un comentario..." Text="{Binding NewComment}" />
+                <Button Text="Enviar" Command="{Binding SubmitCommentCommand}" />
+            </StackLayout>
+        </ScrollView>
     </Grid>
 </ContentPage>

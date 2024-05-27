@@ -3,21 +3,23 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="InterfazTicketsApp.EventDetailPage"
             Title="Detalles del Evento">
-    
-    <Grid>
-        
-        <Image Source="interfaz.JPG" Aspect="AspectFill"
-            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-       
-        <StackLayout Padding="10" BackgroundColor="#00000000">
-            
-            <Button Text="Comprar Tickets" Command="{Binding BuyTicketsCommand}" />
-            <Label Text="{Binding EventName}" FontSize="24" FontAttributes="Bold" />
-            <Image Source="{Binding EventImage}" HeightRequest="200" />
-            <Label Text="{Binding EventDate}" FontSize="18" />
-            <Label Text="{Binding EventLocation}" FontSize="18" />
-            <Label Text="{Binding EventDescription}" FontSize="16" />
-            <Button Text="Compartir Evento" Command="{Binding ShareEventCommand}" />
-        </StackLayout>
+
+        <Grid>
+
+            <Image Source="interfaz.jpg" Aspect="Fill"
+            HorizontalOptions="Fill" VerticalOptions="StartAndExpand"/>
+
+        <ScrollView>
+            <StackLayout Padding="10" BackgroundColor="#00000000">
+
+                <Button Text="Comprar Tickets" Command="{Binding BuyTicketsCommand}" />
+                <Label Text="{Binding EventName}" FontSize="24" FontAttributes="Bold" />
+                <Image Source="{Binding EventImage}" HeightRequest="200" />
+                <Label Text="{Binding EventDate}" FontSize="18" />
+                <Label Text="{Binding EventLocation}" FontSize="18" />
+                <Label Text="{Binding EventDescription}" FontSize="16" />
+                <Button Text="Compartir Evento" Command="{Binding ShareEventCommand}" />
+            </StackLayout>
+        </ScrollView>
     </Grid>
 </ContentPage>
