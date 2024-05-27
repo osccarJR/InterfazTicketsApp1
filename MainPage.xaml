@@ -8,8 +8,8 @@
             HorizontalOptions="Fill" VerticalOptions="StartAndExpand"/>
         <ScrollView>
             <StackLayout Padding="10">
-                <SearchBar Placeholder="Buscar eventos..." Text="{Binding SearchQuery}" />
-                <Picker Title="Categoría" SelectedItem="{Binding SelectedCategory}">
+                <SearchBar Placeholder="Buscar eventos..." Text="{Binding SearchQuery}" BackgroundColor="White" />
+                <Picker Title="Seleccione" TextColor="Black" SelectedItem="{Binding SelectedCategory}" BackgroundColor="White">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Conciertos</x:String>
@@ -19,7 +19,7 @@
                     </Picker.ItemsSource>
                 </Picker>
                 <DatePicker Date="{Binding SelectedDate}" />
-                <Button Text="Buscar" Command="{Binding SearchCommand}" />
+                <Button Text="Buscar" BackgroundColor="#007AFF" TextColor="White" Command="{Binding SearchCommand}" />
                 <ListView x:Name="EventListView" ItemsSource="{Binding Events}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
